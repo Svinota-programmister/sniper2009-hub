@@ -6,10 +6,12 @@ body {
     background-size: cover;
     height: 100%; 
 }
+<--почините пж изображение фона если кто сможет-->
 
 h1 {
     text-align: center;
     margin: 0 auto;
     font-size: 100px;
     font-family: 'Marcellus SC', serif;
+
 }
