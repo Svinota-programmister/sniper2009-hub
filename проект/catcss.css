@@ -47,6 +47,7 @@ h1 {
     font-family: 'Manrope', sans-serif;
     border: 1px solid rgba(38, 32, 25, 0.498);
     font-size: 30px;
+    color: 64451E;
 }
 
 .card-main-intro {
@@ -80,6 +81,12 @@ h1 {
     align-self: center;
 }
 
+text-info {
+    font-size: 35px;
+    font-family: 'Manrope', sans-serif;
+    color: white;
+}
+
 card {
     max-width: 900px;
     margin: 20px auto;
@@ -91,4 +98,6 @@ card {
     box-shadow: 0 10px 30px rgba(0,0,0,0.25);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+    color: 64451E;
 }
+
