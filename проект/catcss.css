@@ -65,30 +65,35 @@ h1 {
 }
 
 .exhibit-column-left {
-    width: 30%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    width: 70%;
+    margin-right: 20px;
 }
 
 .exhibit-column-left img {
-    max-width: 100%;
+    max-width: 200px; /* Размер картинки */
     height: auto;
-    margin-top: 10px;
+    border-radius: 15px;
 }
 
 .exhibit-column-right {
-    width: 70%;
-    margin-left: 20px;
-    margin-right: 0;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.exhibit-column-right img {
+    max-width: 200px; /* Размер картинки */
     height: auto;
-    align-self: center;
+    border-radius: 15px;
 }
 
 .text-info {
     font-size: 35px;
     font-family: 'Manrope', sans-serif;
     color: white;
+    text-align: left;
+    margin-bottom: 15px;
 }
 
 card {
@@ -104,6 +109,7 @@ card {
     -webkit-backdrop-filter: blur(10px);
     color: 64451E;
 }
+
 
 
 
