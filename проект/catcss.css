@@ -98,7 +98,7 @@ h1 {
 .text-info {
     font-size: 35px;
     font-family: 'Manrope', sans-serif;
-    color: black;
+    color: white;
     text-align: left;
     margin-bottom: 15px;
 }
@@ -116,6 +116,7 @@ card {
     -webkit-backdrop-filter: blur(10px);
     color: 64451E;
 }
+
 
 
 
