@@ -46,12 +46,16 @@ h1 {
     border-radius: 35px;
     background: #d9d9d9;
     opacity: 0.7;
-    padding: 25px;
+    padding: 20px 30px; /* Увеличил горизонтальные отступы, уменьшил вертикальные */
     font-family: 'Manrope', sans-serif;
     border: 1px solid rgba(38, 32, 25, 0.498);
     font-size: 24px;
     color: #64451E;
-    height: 100%; /* Занимает всю доступную высоту */
+    height: auto; /* Убрал 100% высоту */
+    min-height: 150px; /* Минимальная высота для горизонтального вида */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Центрируем содержимое по вертикали */
 }
 
 .card-main-intro {
@@ -60,14 +64,14 @@ h1 {
 
 .exhibit-row {
     display: flex;
-    justify-content: space-between; /* Распределяет пространство между колонками */
-    align-items: stretch; /* Растягивает колонки по высоте */
+    justify-content: space-between;
+    align-items: stretch;
     margin: 20px 15%;
-    gap: 20px; /* Расстояние между колонками */
+    gap: 20px;
 }
 
 .exhibit-column-left {
-    width: 65%; /* Левая колонка занимает большую часть */
+    width: 65%;
     display: flex;
     flex-direction: column;
 }
@@ -79,10 +83,10 @@ h1 {
 }
 
 .exhibit-column-right {
-    width: 30%; /* Правая колонка занимает меньшую часть */
+    width: 30%;
     display: flex;
-    justify-content: flex-end; /* Выравнивает содержимое по правому краю */
-    align-items: flex-start; /* Выравнивает по верху */
+    justify-content: flex-end;
+    align-items: flex-start;
 }
 
 .exhibit-column-right img {
@@ -112,6 +116,7 @@ card {
     -webkit-backdrop-filter: blur(10px);
     color: 64451E;
 }
+
 
 
 
