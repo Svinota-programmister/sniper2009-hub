@@ -43,7 +43,6 @@ h1 {
 }
 
 .card-main {
-    margin: 0;
     border-radius: 35px;
     background: #d9d9d9;
     opacity: 0.7;
@@ -51,8 +50,8 @@ h1 {
     font-family: 'Manrope', sans-serif;
     border: 1px solid rgba(38, 32, 25, 0.498);
     font-size: 24px;
-    color: #64451E; /* Добавлен # для цвета */
-    min-height: 250px; /* Чтобы карточка была достаточно высокой */
+    color: #64451E;
+    height: 100%; /* Занимает всю доступную высоту */
 }
 
 .card-main-intro {
@@ -68,8 +67,9 @@ h1 {
 }
 
 .exhibit-column-left {
-    width: 70%;
-    margin-right: 20px;
+    width: 65%; /* Левая колонка занимает большую часть */
+    display: flex;
+    flex-direction: column;
 }
 
 .exhibit-column-left img {
@@ -79,14 +79,14 @@ h1 {
 }
 
 .exhibit-column-right {
-    width: 30%;
+    width: 30%; /* Правая колонка занимает меньшую часть */
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-end; /* Выравнивает содержимое по правому краю */
+    align-items: flex-start; /* Выравнивает по верху */
 }
 
 .exhibit-column-right img {
-    max-width: 200px; /* Размер картинки */
+    max-width: 100%;
     height: auto;
     border-radius: 15px;
 }
@@ -112,6 +112,7 @@ card {
     -webkit-backdrop-filter: blur(10px);
     color: 64451E;
 }
+
 
 
 
