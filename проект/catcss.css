@@ -86,7 +86,7 @@ h1 {
 }
 
 text-info {
-    font-size: 60px;
+    font-size: 35px;
     font-family: 'Manrope', sans-serif;
     color: white;
 }
@@ -104,6 +104,7 @@ card {
     -webkit-backdrop-filter: blur(10px);
     color: 64451E;
 }
+
 
 
 
