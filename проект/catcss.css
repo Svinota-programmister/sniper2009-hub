@@ -43,15 +43,16 @@ h1 {
 }
 
 .card-main {
-    margin: 0 10%;
+    margin: 0;
     border-radius: 35px;
     background: #d9d9d9;
     opacity: 0.7;
-    padding: 15px;
+    padding: 25px;
     font-family: 'Manrope', sans-serif;
     border: 1px solid rgba(38, 32, 25, 0.498);
-    font-size: 30px;
-    color: 64451E;
+    font-size: 24px;
+    color: #64451E; /* Добавлен # для цвета */
+    min-height: 250px; /* Чтобы карточка была достаточно высокой */
 }
 
 .card-main-intro {
@@ -60,8 +61,10 @@ h1 {
 
 .exhibit-row {
     display: flex;
-    align-items: center;
+    justify-content: space-between; /* Распределяет пространство между колонками */
+    align-items: stretch; /* Растягивает колонки по высоте */
     margin: 20px 15%;
+    gap: 20px; /* Расстояние между колонками */
 }
 
 .exhibit-column-left {
@@ -109,6 +112,7 @@ card {
     -webkit-backdrop-filter: blur(10px);
     color: 64451E;
 }
+
 
 
 
