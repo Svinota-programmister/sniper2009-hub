@@ -117,6 +117,57 @@ card {
     color: 64451E;
 }
 
+.gallery-bg {
+  position: relative;
+  width: 720px;
+  height: 521px;
+  overflow: hidden; /* Скрывает содержимое выходящее за пределы блока */
+}
+
+.gallery-overlay {
+  position: absolute;
+  inset: 0; /* Растягивает оверлей по всем краям блока */
+  background: rgba(0, 0, 0, 0.2); /* Полупрозрачное затемнение*/
+}
+
+.cat-info {
+  position: absolute;
+  left: 40px; /* Отступ слева*/
+  top: 80px; /*Отступ сверху*/
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Выравнивание по левому краю*/
+}
+
+.cat-image-left {
+  max-width: 200px;
+  height: auto;
+  border-radius: 15px;
+  object-fit: cover;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+}
+
+.exhibit-title {
+  color: white; 
+  font-size: 35px;
+font-family: 'Manrope', sans-serif;
+  margin-bottom: 14px; /* Отступ снизу после заголовка */
+}
+
+.cat-description {
+  position: absolute;
+  left: 200px; /* Отступ слева */
+  top: 140px; /* Отступ сверху */
+  width: 400px;
+  background: rgba(255,255,255,0.75); /* Полупрозрачный белый фон*/
+  color: #66451E;
+  font-size: 24px;
+  padding: 26px 18px; /* Внутренние отступы*/
+  border-radius: 14px;
+}
+
+
 
 
 
