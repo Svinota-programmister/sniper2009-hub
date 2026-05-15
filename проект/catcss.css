@@ -62,137 +62,75 @@ h1 {
     font-weight: 600;
 }
 
-.exhibit-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: stretch;
-    margin: 20px auto;
-    gap: 20px;
-}
-
-.exhibit-column-left {
-    width: 65%;
-    display: flex;
-    flex-direction: column;
-}
-
-.exhibit-column-left img {
-    max-width: 200px; /* Размер картинки */
-    height: auto;
+.exhibit-item {
+    margin-bottom: 40px; /* Отступ между экспонатами */
+    background-color: rgba(255,255,255,0.1); /* Слегка подсветим блок */
     border-radius: 15px;
+    padding: 20px;
 }
 
-.exhibit-column-right {
-    width: 30%;
+.exhibit-item-content {
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
+    align-items: center; /* Выравниваем картинку и текст по центру */
+    gap: 30px; /* Расстояние между картинкой и текстом */
+    flex-wrap: wrap; /* На мобильных устройствах все будет переноситься */
 }
 
-.exhibit-column-right img {
+.exhibit-image-container {
+    flex: 1; /* Картинка займет часть доступного пространства */
+    min-width: 250px; /* Минимальная ширина для картинки */
+}
+
+.exhibit-image-container img {
     max-width: 100%;
     height: auto;
-    border-radius: 15px;
+    border-radius: 10px;
+    display: block; /* Убирает лишний отступ под картинкой */
 }
 
-.text-info {
-    font-size: 35px;
-    font-family: 'Manrope', sans-serif;
-    color: white;
-    text-align: left;
-    margin-bottom: 15px;
-}
-
-card {
-    max-width: 900px;
-    margin: 20px auto;
-    padding: 24px 28px;
-    color: #fff;
-    background: rgba(255,255,255,0.18);
-    border: 1px solid rgba(255,255,255,0.28);
-    border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    color: #64451E;
-}
-
-.gallery-bg {
-  position: relative;
-  width: 720px;
-  height: 521px;
-  overflow: hidden; /* Скрывает содержимое выходящее за пределы блока */
-}
-
-.gallery-overlay {
-  position: absolute;
-  inset: 0; /* Растягивает оверлей по всем краям блока */
-  background: rgba(0, 0, 0, 0.2); /* Полупрозрачное затемнение*/
-}
-
-.cat-info {
-  position: absolute;
-  left: 40px; /* Отступ слева*/
-  top: 80px; /*Отступ сверху*/
-  width: 240px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; /* Выравнивание по левому краю*/
-}
-
-.cat-image-left {
-  max-width: 200px;
-  height: auto;
-  border-radius: 15px;
-  object-fit: cover;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+.exhibit-text-container {
+    flex: 1; /* Текст займет другую часть пространства */
+    min-width: 300px; /* Минимальная ширина для текста */
 }
 
 .exhibit-title {
-  color: white; 
-  font-size: 35px;
-font-family: 'Manrope', sans-serif;
-  margin-bottom: 14px; /* Отступ снизу после заголовка */
+    font-size: 35px; /* Как у вас было text-info */
+    font-family: 'Manrope', sans-serif;
+    color: white;
+    margin-bottom: 15px;
 }
 
-.cat-description {
-  position: absolute;
-  left: 200px; /* Отступ слева */
-  top: 140px; /* Отступ сверху */
-  width: 400px;
-  background: rgba(255,255,255,0.75); /* Полупрозрачный белый фон*/
-  color: #66451E;
-  font-size: 24px;
-  padding: 26px 18px; /* Внутренние отступы*/
-  border-radius: 14px;
+.exhibit-description {
+    font-size: 24px; /* Или из card-main */
+    font-family: 'Manrope', sans-serif;
+    color: #64451E; /* Ваши цвета */
+    line-height: 1.4; /* Для лучшей читаемости */
 }
 
-.exhibit-column-left {
-  flex: 1; /* Занимает большую часть доступного пространства */
-  padding: 20px;
-  background-color: rgba(255, 255, 255, 0.8); /* Белый полупрозрачный фон */
-  border-radius: 10px;
-  margin-right: 20px; /* Отступ справа от колонки с текстом */
+/* Для чередования*/
+.exhibit-item:nth-child(odd) .exhibit-item-content {
+    flex-direction: row-reverse; /* Переворачиваем порядок на нечетных */
 }
 
-.exhibit-column-right {
-  flex: 0 0 300px; /* Не будет сжиматься, фиксированная ширина */
-  text-align: center; /* Выравнивание по центру */
+/* Адаптивность */
+@media (max-width: 768px) {
+    .exhibit-item-content {
+        flex-direction: column; /* На маленьких экранах всё ставится в колонну */
+        align-items: center;
+    }
+    .exhibit-item:nth-child(odd) .exhibit-item-content {
+        flex-direction: column; /* И для нечетных тоже */
+    }
+    .exhibit-image-container, .exhibit-text-container {
+        min-width: unset; /* Снимаем минимальную ширину */
+        width: 100%; /* Занимают всю ширину */
+         text-align: center; /* Центрируем текст */
+    }
+    .exhibit-image-container {
+        margin-bottom: 20px; /* Отступ под картинкой */
+    }
 }
 
-.exhibit-column-right img {
-  max-width: 100%; /* Изображение не больше контейнера */
-  height: auto;
-  border-radius: 10px;
-  margin-bottom: 10px; /* Небольшой отступ под картинкой */
-}
-
-.text-info {
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 5px 10px;
-  border-radius: 5px;
-  display: inline-block; /* Чтобы занимал место только по контенту */
-}
 
 
 
