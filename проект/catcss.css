@@ -94,16 +94,16 @@ h1 {
 }
 
 .exhibit-title {
-    font-size: 35px; /* Как у вас было text-info */
+    font-size: 35px; 
     font-family: 'Manrope', sans-serif;
     color: white;
     margin-bottom: 15px;
 }
 
 .exhibit-description {
-    font-size: 24px; /* Или из card-main */
+    font-size: 24px; 
     font-family: 'Manrope', sans-serif;
-    color: #64451E; /* Ваши цвета */
+    color: #64451E;
     line-height: 1.4; /* Для лучшей читаемости */
 }
 
