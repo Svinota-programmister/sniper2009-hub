@@ -66,7 +66,7 @@ h1 {
     display: flex;
     justify-content: space-between;
     align-items: stretch;
-    margin: 20px 15%;
+    margin: 20px auto;
     gap: 20px;
 }
 
@@ -114,7 +114,7 @@ card {
     box-shadow: 0 10px 30px rgba(0,0,0,0.25);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    color: 64451E;
+    color: #64451E;
 }
 
 .gallery-bg {
@@ -165,12 +165,6 @@ font-family: 'Manrope', sans-serif;
   font-size: 24px;
   padding: 26px 18px; /* Внутренние отступы*/
   border-radius: 14px;
-}
-
-.exhibit-row {
-  display: flex;
-  flex-wrap: wrap; /* Чтобы контент переносился на маленьких экранах */
-  margin-bottom: 20px; /* Отступ снизу между рядами */
 }
 
 .exhibit-column-left {
